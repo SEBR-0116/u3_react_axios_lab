@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { BASE_URL } from './globals'
 import Header from './components/Header'
 import Main from './components/Main'
 import './App.css'
