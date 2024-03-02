@@ -1,0 +1,41 @@
+body{
+    color: white;
+    /* background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1200px-Star_Wars_Logo.svg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+.ship-list-ul{
+    margin: 20px 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-style{
+    color: cadetblue;
+}
+
+.page-title{
+    color: blueviolet;
+    position: fixed;
+    margin: 10px;
+    left: 550px;
+    background-color: black;
+
+    text-align: center;
+    
+}
+.ship-container{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    max-height: 500px;
+}
+
+.list-container{
+    border: 3px solid yellowgreen;
+    margin: 35px 35px;
+    padding: 15px 10px;
+    border-radius: 15px;
+}
