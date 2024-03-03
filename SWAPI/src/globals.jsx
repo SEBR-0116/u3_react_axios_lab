@@ -1,2 +1,2 @@
-export const BASE_URL = 'https://swapi.dev/api/starships'
+export const BASE_URL = 'https://swapi.dev/api'
 
