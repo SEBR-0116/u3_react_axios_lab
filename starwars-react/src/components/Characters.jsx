@@ -1,4 +1,4 @@
-import './characters.css'
+import '../componentsStyles/characters.css'
 
 export default function Characters (props) {
   console.log(props)

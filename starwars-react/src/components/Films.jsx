@@ -1,4 +1,4 @@
-import './films.css'
+import '../componentsStyles/films.css'
 
 export default function Films (props) {
   console.log(props)

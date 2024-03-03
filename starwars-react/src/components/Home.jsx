@@ -1,5 +1,5 @@
 import ReactPlayer from 'react-player'
-import './home.css'
+import '../componentsStyles/home.css'
 
 export default function Home () {
 

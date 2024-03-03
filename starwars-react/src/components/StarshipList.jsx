@@ -1,4 +1,4 @@
-import './starships.css'
+import '../componentsStyles/starships.css'
 
 export default function StarshipList (props) {
   console.log(props)

@@ -1,4 +1,4 @@
-import './planets.css'
+import '../componentsStyles/planets.css'
 
 export default function Planets (props) {
   console.log(props)
