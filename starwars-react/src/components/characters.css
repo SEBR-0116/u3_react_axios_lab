@@ -1,0 +1,30 @@
+.character-info {
+  margin-top: 20px;
+}
+
+.character-name {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  font-size: 20px;
+}
+
+.value {
+  font-size: 32px;
+  text-decoration: underline;
+}
+
+.height,
+.weight,
+.hair-color,
+.eye-color,
+.birth-year,
+.gender {
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+}

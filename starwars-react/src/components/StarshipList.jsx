@@ -1,3 +1,5 @@
+import './starships.css'
+
 export default function StarshipList (props) {
   console.log(props)
 
@@ -9,15 +11,20 @@ export default function StarshipList (props) {
         {
           props.starships.map((starship, index) => (
             <div key={index}>
-              <h1> Name: {starship.name}</h1>
-              <h2> Model: {starship.model}</h2>
-              <h3> Class: {starship.starship_class}</h3>
-              <h3> By: {starship.manufacturer}</h3>
-              <h3> Crew Members: {starship.crew}</h3>
-              <h3> Passanger Capacity: {starship.passengers}</h3>
-              <h3> Cargo Capacity: {starship.cargo_capacity}</h3>
-              <h3> Max Atmosphering Speed: {starship.max_atmosphering_speed}</h3>
-              <h3> Hyperdrive Rating: {starship.hyperdrive_rating}</h3>
+              <div className='starship-info'>
+                <div className='starship-name'>
+                  <div className='label'>Name:</div>
+                  <div className='value'>{starship.name}</div>                  
+                </div>
+              </div>
+              <div className='model'> Model: {starship.model}</div>
+              <div className='class'> Class: {starship.starship_class}</div>
+              <div className='manufacture'> By: {starship.manufacturer}</div>
+              <div className='crew'> Crew Members: {starship.crew}</div>
+              <div className='pass-capacity'> Passanger Capacity: {starship.passengers}</div>
+              <div className='cargo-capacity'> Cargo Capacity: {starship.cargo_capacity}</div>
+              <div className='atmospher'> Max Atmosphering Speed: {starship.max_atmosphering_speed}</div>
+              <div className='hyperdrive'> Hyperdrive Rating: {starship.hyperdrive_rating}</div>
             </div>
           ))
         }

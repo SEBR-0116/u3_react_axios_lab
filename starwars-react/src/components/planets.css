@@ -1,0 +1,23 @@
+h4 {
+  display: flex;
+  font-size: 14px;
+  padding: 0px;
+  margin: 10px 0px 0px 0px;
+}
+
+.planet-info {
+  margin-top: 20px;
+}
+
+.planet-name {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rotation, .days, .climate, .water, .terrain, .population, .diameter {
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+}
