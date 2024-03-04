@@ -14,12 +14,12 @@ h1{
   
 }
 
-.starship, .Films{
+.starship, .Films ,.planets,.people{
   display: flex;
   flex-wrap: wrap; 
   justify-content: space-between; 
 }
-.starship, .Films> h2{
+.starship, .Films, .planets ,.people> h2{
   color: aliceblue;
   text-align: center;
 }
@@ -49,6 +49,7 @@ h3{
  h4{
   font-size:  large;
   color: aliceblue;
+  margin: 10px;
 }
 
 .pagetitle{

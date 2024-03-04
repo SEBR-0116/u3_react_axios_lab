@@ -3,31 +3,32 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 
-export default function Planets(){
+export default function Planets (){
     
-// const [planets, setPlanets] =useState([])
+const [planets, setPlanets] =useState([])
 
-// useEffect(()=>{
+useEffect(()=>{
 
-//     const getPlanets =async () => {
-//         const response =await axios.get(`https://swapi.dev/api/planets/`)
-//         setPlanets(response.data.results)
-//         console.log(response)
-//     }
-//     getPlanets
-// },[])
+    const getPlanets =async () => {
+        const response = await axios.get(`https://swapi.dev/api/planets/`)
+        setPlanets(response.data.results)
+        console.log(response)
+    }
+    getPlanets()
+},[])
 
-// let navigate = useNavigate()
+let navigate = useNavigate()
 
-// const showPlanet = (key) =>{
-//     navigate(`${key}`)
-// }
+const showPlanet = (key) =>{
+    navigate(`${key}`)
+}
 return (
 
 <>
-<h2> List of Planets</h2>
+ 
+<h1> List of Planets</h1>
 
-{/* <div className="planets">
+<div className="planets">
     {
         planets.map((planet , key) =>(
             <div key={key} onClick={()=>showPlanet(key)} className="card">
@@ -40,9 +41,9 @@ return (
          ))
     }
 </div>
- */}
 
 </>
+
 )
 
 }
