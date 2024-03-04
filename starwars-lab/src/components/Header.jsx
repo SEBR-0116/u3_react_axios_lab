@@ -2,7 +2,10 @@ import Nav from './Nav'
 
 const Header = () => {
     return (
-        <Nav />
+        <div className="header">
+            <h1 className="title-text">Star Wars</h1>
+            <Nav />
+        </div>
     )
 }
 

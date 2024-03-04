@@ -26,7 +26,6 @@ const FilmList = (props) => {
       {
         films.map((film) => (
           <div key={film.title} className="card">
-           
             <h2>{film.title}</h2>
             <ul>
               <h3></h3>

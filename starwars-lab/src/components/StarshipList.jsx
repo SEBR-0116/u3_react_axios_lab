@@ -27,26 +27,37 @@ const StarshipList = (props) => {
   console.log(starships)
 
   if (starships.length === 0) {
-    return <h1>Retrieving from far, far away...</h1>
+    return <h1 className="retrieving-text">Retrieving from far, far away...</h1>
   } else {
     return (
       <div>
-      <h1>Starships</h1>
-      {
-        starships.map((starship) => (
-          <div key={starship.name} className="card">
+        <h1 className="page-title">Starships</h1>
+        <div className="card-container">
+        {
+          starships.map((starship) => (
+            <div key={starship.name} className="card">
+              <div className="first-display">
+                <div className='category-container'>
+                    <h2 className="Droid-text">Starship</h2>
+                    <div className="category-lines">
+                      <div className="category-line1"></div>
+                      <div className="category-line2"></div>
+                    </div>
+                </div>
+                <h2 className="ship-name">{starship.name}</h2>
+                  <ul className='second-display'>
+                    <div className='details-container'>
+                      <h3>Cost -- {starship.cost_in_credits} c</h3>
+                      <div className="detail-line"></div>
+                    </div>  
+                  </ul>
+                  </div>
+              </div>
+              
             
-            <h2>{starship.name}</h2>
-            <ul>
-              {/* <h3>Model: {starship.model}</h3>
-              <h3>Cost: {starship.cost_in_credits} credits</h3>
-              <h3>Crew: {starship.crew} personel</h3>
-              <h3>Max Atmospheric Speed: {starship.max_atmosphering_speed} km/h</h3>
-              <h3>Hyperdrive Class: {starship.hyperdrive_rating}</h3> */}
-            </ul>
-          </div>
-        ))
-      }
+          ))
+        }
+        </div>
       </div>
     )
 }

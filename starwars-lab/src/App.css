@@ -1,43 +1,177 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@font-face {
+  font-family: 'Starjedi'; 
+  src: url('src/assets/fonts/Starjedi.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'DroidobeshDepot'; 
+  src: url('src/assets/fonts/DroidobeshDepot.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'AtomedItalic'; 
+  src: url('src/assets/fonts/AtomedItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'TradeGothic-Bold'; 
+  src: url('src/assets/fonts/TradeGothic-Bold.ttf') format('truetype');
+}
+
+
+body{
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
   text-align: center;
+  background-color: #242424;
+  text-rendering: optimizeLegibility;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title-text {
+  font-family: "Starjedi", sans-serif;
+  color: rgb(255, 232, 31);
+  font-size: 3em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.navbar {
+  font-family: "TradeGothic-Bold", sans-serif;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 90vw;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgb(255, 232, 31);
+}
+
+.main{
+  font-family: "TradeGothic-Bold", sans-serif;
+  font-size: 30px;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  height: 100vh;
+}
+
+
+/* ///// */
+.retrieving-text {
+  font-size: 2rem;
+}
+h1 {
+  font-family: "TradeGothic", sans-serif;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .card {
-  padding: 2em;
-  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  font-family: 'AtomedItalic', sans-serif;
+  width: 350px; 
+  height: 155px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: rgb(20,24,32);
+  border-top: 10px solid rgb(118, 118, 131);
+  border-bottom: 10px solid rgb(45, 45, 50);
+  border-left: 10px solid rgb(79,79,88);
+  border-right: 10px solid rgb(79,79,88);
+  box-shadow: 5px 5px 10px 0px black;
 }
 
-.read-the-docs {
-  color: #888;
+.first-display{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: rgb(230,230,240);
+    border: 3px solid rgb(230,230,240);
+    margin-bottom: 5px;
 }
+.category-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 20px;
+  margin-bottom: -10px;
+}
+    .ship-name {
+      margin-top: 0;
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-left: 20px;
+      font-family: "TradeGothic", sans-serif;
+      font-size: 25px;
+    }
+    .Droid-text {
+      font-family: "DroidobeshDepot", sans-serif;
+      font-size: 15px;
+      padding-right: 15px;
+    }
+
+    .category-lines{
+      display: flex;
+      flex-direction: column;
+    }
+        .category-line1 {
+          width: 40px;
+          height: 10px;
+          border-radius: 2px;
+          border: none;
+          background-color: rgb(230,230,240);
+          margin-bottom: 2px;
+        }
+        .category-line2 {
+          width: 60px;
+          height: 2px;
+          border-radius: 2px;
+          border: none;
+          background-color: rgb(230,230,240);
+        }
+
+
+.second-display {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  font-size: 12px;
+  color: white;
+  padding-right: 20px;
+  margin-left: 75px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  border-left: 3px solid rgb(173,5,32);
+  border-right: 3px solid rgb(173,5,32);
+}
+
+
+
+    .detail-line {
+      margin-top: -10px;
+      margin-bottom: 10px;
+      width: 50px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: rgb(230,230,240);
+    }
+
+
+
