@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
+import { useNavigate } from 'react-router-dom'
 
 const VehicleList = (props) => {
 
@@ -25,23 +26,44 @@ const VehicleList = (props) => {
 
   console.log(vehicles)
 
+  let navigate=useNavigate()
+  
+  const showVehicle = (key) => {
+    navigate(`${key}`)
+
+    console.log(key)
+  }
+
   if (vehicles.length === 0) {
-    return <h1>Retrieving from far, far away...</h1>
+    return <h1 className="retrieving-text">Retrieving from far, far away...</h1>
   } else {
     return (
       <div>
-      <h1>Vehicles</h1>
-      {
-        vehicles.map((vehicle) => (
-          <div key={vehicle.name} className="card">
-           
-            <h2>{vehicle.name}</h2>
-            <ul>
-              <h3></h3>
-            </ul>
-          </div>
-        ))
-      }
+        <h1 className="page-title">Vehicles</h1>
+        <div className="card-container">
+        {
+          vehicles.map((vehicle, key) => (
+            <div key={key} className="card" onClick={() => showVehicle(parseInt(vehicle.url.substring(32,34)))}>
+              <div className="first-display">
+                <div className='category-container'>
+                    <h2 className="Droid-text">Vehicle</h2>
+                    <div className="category-lines">
+                      <div className="category-line1"></div>
+                      <div className="category-line2"></div>
+                    </div>
+                </div>
+                <h2 className="name">{vehicle.name}</h2>
+                  <ul className='second-display-long'>
+                    <div className='details-container-long'>
+                      <h3>-- {vehicle.vehicle_class}</h3>
+                      <div className="detail-line"></div>
+                    </div>  
+                  </ul>
+              </div>
+            </div>
+          ))
+        }
+        </div>
       </div>
     )
 }
