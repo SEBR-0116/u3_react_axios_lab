@@ -60,14 +60,13 @@ const Main = () => {
             element={<Home/>}/>
         <Route path="/starship"
             element={<StarshipList starships={starships}/>}/>
+        <Route path="/starship/:name" element = { <StarshipItems starships={starships}/>} />
         <Route path="/films"
             element={<Films films={films}/>}/>
         <Route path="/planets"
             element={<Planets planets={planets}/>}/>
         <Route path="/characters"
             element={<Characters characters={characters}/>}/>
-        <Route path="/starship/startshipItems"
-            element={<StarshipItems starships={starships}/>}/>
     </Routes>
     </> 
 )}
