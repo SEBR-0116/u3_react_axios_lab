@@ -17,7 +17,7 @@ import SpeciesPage from './SpeciesPage'
 import species from './SpeciesList'
 import VehiclesList from './VehiclesList'
 import VehiclePage from './VehiclePage'
-import vehicles from './VehicleList'
+import vehicles from './VehiclesList'
 
 
 const Main = (props) => {
@@ -37,7 +37,7 @@ const Main = (props) => {
                 <Route path="/species" element={<SpeciesList/>}/>
                 <Route path="/species/:id" element={<SpeciesPage species={species}/>}/>
                 <Route path="/vehicles" element={<VehiclesList/>}/>
-                <Route path="/vehivles/:id" element={<VehiclePage vehicles={vehicles}/>}/>
+                <Route path="/vehicles/:id" element={<VehiclePage vehicles={vehicles}/>}/>
             </Routes>
         </div>
         </>

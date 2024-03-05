@@ -43,7 +43,7 @@ const VehicleList = (props) => {
         <div className="card-container">
         {
           vehicles.map((vehicle, key) => (
-            <div key={key} className="card" onClick={() => showVehicle(parseInt(vehicle.url.substring(32,34)))}>
+            <div key={key} className="card" onClick={() => showVehicle(parseInt(vehicle.url.substring(31,33)))}>
               <div className="first-display">
                 <div className='category-container'>
                     <h2 className="Droid-text">Vehicle</h2>

@@ -26,26 +26,26 @@ const VehiclePage = () => {
         <div>
             <div className="item-container">
                 <div className="item-header">
-                    <h1>{starship.name}</h1>
+                    <h1>{vehicle.name}</h1>
                 </div>
-                <h3 className="info-title">Ship details</h3>
+                <h3 className="info-title">Vehicle details</h3>
                 <div className="info-wrapper">
-                    <h3>-- Model: {starship.model}</h3>
-                    <h3>-- Manufacturer: {starship.manufacturer}</h3>
-                    <h3>-- Cost: {starship.cost_in_credits} credits</h3>
-                    <h3>-- Speed: {starship.max_atmosphering_speed} km/h</h3>
-                    <h3>-- Hyperdrive Rating: {starship.hyperdrive_rating}</h3>
-                    <h3>-- Length: {starship.length}m</h3>
-                    <h3>-- Crew: {starship.crew}</h3>
-                    <h3>-- Passengers: {starship.passengers}</h3>
-                    <h3>-- Cargo Capacity: {starship.cargo_capacity}kg</h3>
+                    <h3>-- Model: {vehicle.model}</h3>
+                    <h3>-- Manufacturer: {vehicle.manufacturer}</h3>
+                    <h3>-- Cost: {vehicle.cost_in_credits} credits</h3>
+                    <h3>-- Speed: {vehicle.max_atmosphering_speed} km/h</h3>
+                    <h3>-- Vehicle Class: {vehicle.vehicle_class}</h3>
+                    <h3>-- Length: {vehicle.length}m</h3>
+                    <h3>-- Crew: {vehicle.crew}</h3>
+                    <h3>-- Passengers: {vehicle.passengers}</h3>
+                    <h3>-- Cargo Capacity: {vehicle.cargo_capacity}kg</h3>
                 </div>
             </div>
             <div className="goback-link">
-            <Link to="/starships">Go Back</Link>
+            <Link to="/vehicles">Go Back</Link>
             </div>
         </div>
         
     ) : null 
 }
- export default StarshipPage
+ export default VehiclePage
