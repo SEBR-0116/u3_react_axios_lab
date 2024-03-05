@@ -10,6 +10,8 @@ export default function Nav (){
                 <li><Link to='/films'>Films</Link> </li>
                 <li><Link to='/planets'>Planets</Link></li>
                 <li><Link to='/characters'>Characters</Link></li>
+                <li><Link to='/vehicles'>Vehicles</Link></li>
+                <li><Link to='/Species'>Species</Link></li>
             </ul>            
 
         </nav>
