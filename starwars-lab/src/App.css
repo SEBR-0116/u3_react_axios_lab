@@ -236,7 +236,7 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   text-decoration: none;
-  background-color: rgb(20,24,32);
+  background-color: rgb(79,79,88);
   color: white;
   border-radius: .3em;;
   margin: 0 auto;
@@ -246,6 +246,6 @@ a:hover {
 }
 
 .goback-link:hover {
-  background-color: rgb(255, 232, 31);
-  color: black;
+  
+  color: rgb(255, 232, 31);
 }

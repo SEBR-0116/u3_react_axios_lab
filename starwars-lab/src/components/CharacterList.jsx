@@ -25,6 +25,7 @@ const CharacterList = (props) => {
       const sortedCharacters = allCharacters.toSorted((a, b) =>
           a.name.localeCompare(b.name))
       setCharacters(sortedCharacters)
+      console.log(sortedCharacters)
     }
 
     getCharacters()
@@ -49,7 +50,7 @@ const CharacterList = (props) => {
         <div className="card-container">
         {
           characters.map((character, key) => (
-            <div key={key} className="card" onClick={() => showCharacter(parseInt(character.url.substring(32,34)))}>
+            <div key={key} className="card" onClick={() => showCharacter(parseInt(character.url.substring(29,31)))}>
               <div className="first-display">
                 <div className='category-container'>
                     <h2 className="Droid-text">Character</h2>

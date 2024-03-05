@@ -7,23 +7,32 @@ const CharacterPage = () => {
 
     const [character, setCharacter] = useState('')
     const [species, setSpecies] = useState('')
+    const [homeworld, setHomeworld] = useState('')
 
     let {id} = useParams()
     console.log(id)
 
     useEffect(() => {
-        const getSCharacter = async() => {
-            const response = await axios.get(`https://swapi.dev/api/people/${id}`)
-            setCharacter(response.data)
-            console.log(response.data)
+        const getCharacter = async () => {
+            try {
+                const response = await axios.get(`https://swapi.dev/api/people/${id}`)
+                setCharacter(response.data)
+                console.log(response.data)
 
-            if (response.data.species) {
-                const characterResponse = await axios.get(response.data.species)
-                setSpecies(characterResponse.data.name)
+                if (response.data.species) {
+                    const speciesResponse = await axios.get(response.data.species)
+                    setSpecies(speciesResponse.data.name)
+                }
+
+                if (response.data.homeworld) {
+                    const homeworldResponse = await axios.get(response.data.homeworld)
+                    setHomeworld(homeworldResponse.data.name)
+                }
+            } catch (error) {
+                console.error("Error fetching character:", error)
             }
         }
         getCharacter()
-        
     }, [id])
 
     
@@ -36,16 +45,19 @@ const CharacterPage = () => {
                 </div>
                 <h3 className="info-title">Character details</h3>
                 <div className="info-wrapper">
-                    <h3>-- Species {species}</h3>
-                    <h3>-- Designation: {character.designation}</h3>
-                    <h3>-- Avg Height: {character.average_height} cm</h3>
-                    <h3>-- Avg Lifespan: {character.average_lifespan} SY</h3>
-                    <h3>-- Language: {character.language}</h3>
+                    <h3>-- Species: {species}</h3>
                     <h3>-- Homeworld: {homeworld}</h3>
+                    <h3>-- Height: {character.height} cm</h3>
+                    <h3>-- Mass: {character.mass} kg</h3>
+                    <h3>-- Hair Color: {character.hair_color}</h3>
+                    <h3>-- Skin Color: {character.skin_color}</h3>
+                    <h3>-- Eye Color: {character.eye_color}</h3>
+                    <h3>-- Birth Year: {character.birth_year}</h3>
+                    <h3>-- Gender: {character.gender}</h3>
                 </div>
             </div>
             <div className="goback-link">
-            <Link to="/species">Go Back</Link>
+            <Link to="/characters">Go Back</Link>
             </div>
         </div>
         
