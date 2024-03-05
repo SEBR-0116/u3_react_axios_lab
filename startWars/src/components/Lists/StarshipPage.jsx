@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams, Link } from "react-router-dom"
+import Fourofour from "./Fourofour"
 import axios from "axios"
 
 export default function StarshipPage() {
@@ -27,6 +28,6 @@ export default function StarshipPage() {
       <Link to="/StarshipsList">Return to starship list</Link>
     </div>
   ) : (
-    <h3>Finding starships...</h3>
+    <h3><Fourofour/></h3>
   )
 }
