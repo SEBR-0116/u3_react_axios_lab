@@ -1,0 +1,101 @@
+body{
+    color: white;
+    /* background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1200px-Star_Wars_Logo.svg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+.data-list-ul{
+    margin: 20px 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-style{
+    color: cadetblue;
+}
+
+.page-title{
+    color: blueviolet;
+    position: fixed;
+    margin: 10px;
+    left: 550px;
+    background-color: black;
+
+    text-align: center;
+    
+}
+.main-container{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    max-height: 900px;
+}
+
+.list-container{
+    border: 3px solid yellowgreen;
+    margin: 35px 35px;
+    padding: 15px 10px;
+    border-radius: 15px;
+}
+.main-container{
+    border: 3px solid yellowgreen;
+    margin: 35px 35px;
+    padding: 15px 10px;
+    border-radius: 15px;
+}
+
+.film-title{
+    color: brown;
+}
+
+.pilot-name{
+    color: greenyellow;
+}
+
+.back-to-starship-list{
+    text-align: center;
+}
+
+.detail-header {
+    background-color: rgb(23, 28, 46);
+    padding-bottom: 1em;
+    padding-right: 1em;
+    justify-content: space-between;
+    color: white;
+    max-width: 100vw;
+  }
+  
+  .detail-header img {
+    width: 40em;
+    height: 20em;
+    object-fit: cover;
+  }
+  
+  .info-wrapper {
+    max-width: 40em;
+    margin: 0 auto;
+    text-align: left;
+    border: 3px solid yellowgreen;
+    border-radius: 15px;
+    
+  }
+  
+  .detail {
+    min-height: 35em;
+    justify-content: space-between;
+  }
+  
+  .card{
+    border: 3px solid chocolate;
+    border-radius: 15px;
+    padding : 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card:hover{
+    transform: scale(1.01);
+  }
