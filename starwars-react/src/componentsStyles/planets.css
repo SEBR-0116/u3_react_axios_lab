@@ -10,11 +10,12 @@ h4 {
   margin-top: 20px;
 }
 
-.planet-name {
+.planet-name, .planets {
   font-size: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 
 .rotation, .days, .climate, .water, .terrain, .population, .diameter {

@@ -21,10 +21,10 @@ export default function Nav () {
     <Link to='#' className='menu-bars'><AiIcons.AiOutlineClose /></Link>
     </li>
     <Link to='/' className='nav-text'> Home </Link>
-    <Link to='/starships' className='nav-text'> Starships </Link>
-    <Link to='/films' className='nav-text'> Films </Link>
-    <Link to='/planets' className='nav-text'> Planets </Link>
-    <Link to='/characters' className='nav-text'> Characters </Link>
+    <Link to='/starshiplist' className='nav-text'> Starships </Link>
+    <Link to='/filmlist' className='nav-text'> Films </Link>
+    <Link to='/planetslist' className='nav-text'> Planets </Link>
+    <Link to='/characterslist' className='nav-text'> Characters </Link>
     </ul>
     </nav>
   </div>

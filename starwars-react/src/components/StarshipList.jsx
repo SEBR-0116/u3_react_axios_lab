@@ -1,34 +1,44 @@
+import { useState, useEffect } from "react"
+import axios from "axios"
+import { useNavigate } from "react-router-dom"
 import '../componentsStyles/starships.css'
 
-export default function StarshipList (props) {
-  console.log(props)
+export default function StarshipList () {
+  console.log()
 
-  if (!props.starships) {
-    return <h1> Loading Please Wait </h1>
-  } else {
-    return (
-      <div>
-        {
-          props.starships.map((starship, index) => (
-            <div key={index}>
-              <div className='starship-info'>
-                <div className='starship-name'>
-                  <div className='label'>Name:</div>
-                  <div className='value'>{starship.name}</div>                  
-                </div>
-              </div>
-              <div className='model'> Model: {starship.model}</div>
-              <div className='class'> Class: {starship.starship_class}</div>
-              <div className='manufacture'> By: {starship.manufacturer}</div>
-              <div className='crew'> Crew Members: {starship.crew}</div>
-              <div className='pass-capacity'> Passanger Capacity: {starship.passengers}</div>
-              <div className='cargo-capacity'> Cargo Capacity: {starship.cargo_capacity}</div>
-              <div className='atmospher'> Max Atmosphering Speed: {starship.max_atmosphering_speed}</div>
-              <div className='hyperdrive'> Hyperdrive Rating: {starship.hyperdrive_rating}</div>
-            </div>
-          ))
-        }
-      </div>
-    )
+  const [starships, setStarships] = useState([])
+  const [currentPage, setCurrentPage] = useState(1)
+
+useEffect(()=>{
+  const getStarships = async() => {
+
+    const response = await axios.get(`https://swapi.dev/api/starships/?page=${currentPage}`)
+
+    setStarships((prevStarship) => [...(prevStarship || []), ...response.data.results])
+
+    if (response.data.next !== null) {
+      setCurrentPage((prevPage) => prevPage + 1)
+    }
   }
+  getStarships()
+},[currentPage])
+
+let navigate = useNavigate()
+
+const showShip = (key) => {
+  navigate(`/starships/${key}`)
+}
+
+return(
+  <div className="starship">
+    <h2>List of Starships</h2>
+    {
+      starships.map((starship, index) => (
+        <div key={index} onClick={()=>showShip(parseInt(starship.url.substring(32,34)))} className="card">
+          <h3>{starship.name}</h3>
+        </div>
+      ))
+    }
+  </div>
+)
 }

@@ -2,11 +2,12 @@
   margin-top: 20px;
 }
 
-.film-name {
+.film-name, .films {
   font-size: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 
 .director, .producer, .date {

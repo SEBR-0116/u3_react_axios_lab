@@ -2,11 +2,12 @@
   margin-top: 20px;
 }
 
-.character-name {
+.character-name, .characters {
   font-size: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 
 .label {
