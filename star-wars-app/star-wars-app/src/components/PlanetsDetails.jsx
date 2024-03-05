@@ -17,7 +17,10 @@ export default function PlanetsDetails (props){
     return planets ? (
         <div className='detail'>
             <div className='detail-header'>
-                <h1>{planets.name}</h1>
+                <h1>Name: {planets.name}</h1>
+                <h3>Rotation Period: {planets.rotation_period}</h3>
+                <h3>Orbital Period: {planets.orbital_period}</h3>
+                <h3>Terrain: {planets.terrain}</h3>
 
 
 

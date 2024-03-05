@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 
 
 export default function SpeciesDetails (props){
-   
+
 
     let {index}=useParams()
     const [species, setSpecies]=useState('')
@@ -17,7 +17,10 @@ export default function SpeciesDetails (props){
     return species ? (
         <div className='detail'>
             <div className='detail-header'>
-                <h1>{species.name}</h1>
+                <h1>Name: {species.name}</h1>
+                <h3>Classification: {species.classification}</h3>
+                <h3>Average Height: {species.average_height}</h3>
+                <h3>Language: {species.language}</h3>
 
 
 

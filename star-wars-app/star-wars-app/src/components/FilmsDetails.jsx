@@ -17,7 +17,10 @@ export default function FilmsDetails (props){
     return films ? (
         <div className='detail'>
             <div className='detail-header'>
-                <h1>{films.title}</h1>
+                <h1>Title: {films.title}</h1>
+                <h3>Episode: {films.episode_id}</h3>
+                <h3>Director: {films.director}</h3>
+                <h3>Release Date: {films.release_date}</h3>
 
 
 

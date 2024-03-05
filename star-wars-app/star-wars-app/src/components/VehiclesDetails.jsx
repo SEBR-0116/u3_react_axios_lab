@@ -17,7 +17,10 @@ console.log(props.vehicles)
     return vehicle ? (
         <div className='detail'>
             <div className='detail-header'>
-                <h1>{vehicle.name}</h1>
+                <h1>Name: {vehicle.name}</h1>
+                <h3>Model: {vehicle.model}</h3>
+                <h3>Cost: ᖬ{vehicle.cost_in_credits}</h3>
+                <h3>Crew: {vehicle.crew}</h3>
 
 
 
