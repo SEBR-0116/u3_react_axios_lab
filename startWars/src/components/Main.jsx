@@ -14,7 +14,7 @@ const Main = () => {
       <Routes>
         <Route exact path="/Home" element={<Home />} />
         <Route exact path="/StarshipsList" element={<StarshipsList />} />
-        <Route exact path="/StarshipPage/:id" element={<StarshipPage />} />
+        <Route path="/starship/:id" element={<StarshipPage />} />
         <Route exact path="/Planets" element={<Planets />} />
         <Route exact path="/Characters" element={<Characters />} />
         <Route exact path="/Films" element={<Films />} />

@@ -1,32 +1,32 @@
-// StarshipPage.js
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import { useEffect, useState } from "react"
+import { useParams, Link } from "react-router-dom"
+import axios from "axios"
 
-export default function StarshipPage(props) {
-  const [starship, setStarship] = useState(null);
+export default function StarshipPage() {
+  const [starship, setStarship] = useState(null)
+  let { id } = useParams()
 
   useEffect(() => {
-    const getStarshipDetails = async () => {
+    const getStarship = async () => {
       try {
-        const response = await axios.get(`https://swapi.dev/api/starships/${props.id}/`);
-        setStarship(response.data);
+        const response = await axios.get(`https://swapi.dev/api/starships/${id}`)
+        setStarship(response.data)
       } catch (error) {
-        console.error("Error fetching starship details:", error);
+        console.error("Error fetching starship details:", error)
       }
     };
-    getStarshipDetails();
-  }, [props.id]);
+    getStarship()
+  }, [id]) 
 
-  if (!starship) {
-    return <div>Loading...</div>;
-  }
-
-  return (
-    <div>
-      <h2>{starship.name}</h2>
-      <p>Model: {starship.model}</p>
-      <p>Class: {starship.starship_class}</p>
-      <p>Hyperdrive Rating: {starship.hyperdrive_rating}</p>
+  return starship ? (
+    <div className="starship-detail">
+      <h2>Name: {starship.name}</h2>
+      <h4>Model: {starship.model}</h4>
+      <h4>Class: {starship.starship_class}</h4>
+      <h4>Hyperdrive Rating: {starship.hyperdrive_rating}</h4>
+      <Link to="/StarshipsList">Return to starship list</Link>
     </div>
-  );
+  ) : (
+    <h3>Finding starships...</h3>
+  )
 }
