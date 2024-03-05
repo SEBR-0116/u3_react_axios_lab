@@ -9,6 +9,7 @@ import Home from './components/Home'
 import Films from './components/Films'
 import Characters from './components/Characters'
 import Planets from './components/Planets'
+import StarshipItems from './components/StarshipItems'
 
 function App() {
   const [starships, setStarships] = useState([])
@@ -70,6 +71,7 @@ function App() {
         <Routes>
           <Route exact path='/' element= {<Home />} />
           <Route exact path='/starships' element= {<StarshipList starships={starships}/>}/>
+          <Route exact path='/starships/:id' element= {<StarshipItems starships={starships}/>} />
           <Route exact path='/films' element= {<Films films={films}/>} />
           <Route exact path='/characters' element= {<Characters characters={characters}/>} />
           <Route exact path='/planets' element= {<Planets planets={planets}/>} />

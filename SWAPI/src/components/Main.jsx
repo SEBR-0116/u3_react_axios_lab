@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import Home from '.Home'
+import Home from './Home'
 import StarshipList from './StarshipList'
 import Characters from './Characters'
 import Films from './Films'
@@ -12,6 +12,7 @@ const Main = () => {
             <Routes>
                 <Route path='/' element= {<Home />} />
                 <Route path='/starships' element= {<StarshipList />}/>
+                <Route path='/starship/starshipItems' element= {<StarshipItems starships={starships}/>}/>
                 <Route path='/characters' element= {<Characters />} />
                 <Route path='/films' element= {<Films />} />
                 <Route path='/planets' element= {<Planets />} />

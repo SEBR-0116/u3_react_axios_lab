@@ -1,4 +1,5 @@
-
+import StarshipItems from './StarshipItems'
+import { Link } from 'react-router-dom'
 
 const StarshipList = (props) => {
     console.log(props.starships)
@@ -12,11 +13,14 @@ const StarshipList = (props) => {
                 {
                     props.starships.map((starship) => (
                         <div className="ship" key={starship.id}>
-                            <h3>{starship.name}</h3>
-                            <h3>{starship.model}</h3>
+                            <Link to={`/starships/${parseInt(starship.url.substring(32, 34))}`}>
+                                <h3>{starship.name}</h3>
+                            </Link>
+
+                            {/* <h3>{starship.model}</h3>
                             <h3>{starship.manufacturer}</h3>
-                            <h3>{starship.cost_in_credits}</h3>
-                            <button>View Starship</button>
+                            <h3>{starship.cost_in_credits}</h3> */}
+                            {/* <button>View Starship</button> */}
                         </div>
                     ))
                 }
