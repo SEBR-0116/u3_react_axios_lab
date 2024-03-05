@@ -3,8 +3,27 @@ import axios from 'axios'
 import { BASE_URL } from '../globals'
 
 const FilmList = (props) => {
-
   const [films, setFilms] = useState([])
+
+
+  function getRomanNumeral(num) {
+    const romanNumerals = [
+        { value: 5, numeral: 'V' },
+        { value: 4, numeral: 'IV' },
+        { value: 1, numeral: 'I' }
+    ]
+
+    let result = '';
+
+    for (let i = 0; i < romanNumerals.length; i++) {
+        while (num >= romanNumerals[i].value) {
+            result += romanNumerals[i].numeral
+            num -= romanNumerals[i].value
+        }
+    }
+
+    return result;
+  }
 
   useEffect(() => {
     const getFilms = async () => {
@@ -26,7 +45,7 @@ const FilmList = (props) => {
       {
         films.map((film) => (
           <div key={film.title} className="card">
-            <h2>{film.title}</h2>
+            <h2>Episode {getRomanNumeral(film.episode_id)}: {film.title}</h2>
             <ul>
               <h3></h3>
             </ul>
