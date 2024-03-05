@@ -19,7 +19,7 @@ const Planets = () => {
     return (
     <div className='listItemHolder'>
         <h2>Star Wars Planets</h2>
-        <div>
+    
             {
             planets.map((planet) => (
                 <div key={planet.name} className='listItem'>
@@ -34,7 +34,7 @@ const Planets = () => {
                 </div>
             ))
             }
-        </div>
+
     </div>
     )
 }

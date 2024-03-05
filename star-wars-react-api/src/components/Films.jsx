@@ -19,7 +19,7 @@ const Films = () => {
     return (
     <div className='listItemHolder'>
         <h2>Star Wars Films</h2>
-        <div>
+        
             {
             films.map((film) => (
                 <div key={film.name} className='listItem'>
@@ -33,7 +33,7 @@ const Films = () => {
                 </div>
             ))
             }
-        </div>
+
     </div>
     )
 }

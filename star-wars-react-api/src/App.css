@@ -7,6 +7,8 @@
 h2 {
   text-align: left;
   padding-left: 30px;
+  width: 100%;
+  text-align: center;
 }
 .nav {
   padding: 10px;
@@ -28,9 +30,23 @@ li {
   list-style-type: none;
 }
 .listItemHolder {
-  border: solid 1px #eee;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .listItem {
   padding: 10px;
   box-shadow:5px 5px 5px #ddd;
+  width: 80%;
+  margin: 10px;
+}
+.listItem:hover {
+  background-color: #ddd;
+  box-shadow:5px 5px 5px #c2c0c0;
+}
+@media (min-width: 600px) {
+  
+  .listItem {
+    width: 27%;
+  }
 }
