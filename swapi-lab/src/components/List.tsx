@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 
 export default function List() {
     
@@ -8,6 +8,8 @@ export default function List() {
     const [isLoading, setIsLoading] = useState<boolean>(true)
 
     const {category} = useParams()
+
+    let navigate = useNavigate()
 
     const getEntries = async () => {
         let apiResults: any = []
@@ -18,20 +20,29 @@ export default function List() {
         do {
             response.data.next && (response = await axios.get(response.data.next))
             apiResults = [...apiResults, ...response.data.results]
-            console.log(response)
         } while (response.data.next)
 
         setResults([...apiResults])
     }
 
+    const resetPage = async () => {
+        setResults([])
+        setIsLoading(true)
+        await getEntries()
+    }
+
     useEffect(() => {
         getEntries()
-        console.log('Starships: ', results)
+        console.log('Results: ', results)
     }, [])
 
     useEffect(() => {
-        results && setIsLoading(false)
+        results.length > 0 && setIsLoading(false)
     }, [results])
+
+    useEffect(() => {
+        resetPage()
+    }, [category])
 
     return (
         <div>
@@ -43,7 +54,7 @@ export default function List() {
                         <h3>{result.name}</h3>
                         <button
                             onClick={() => {
-                                
+                                navigate(`/list/${category}/${result.url.split("/")[result.url.split("/").length - 2]}`)
                             }}>More info</button>
                     </div>
                 ))
