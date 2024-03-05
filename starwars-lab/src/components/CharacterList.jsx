@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
+import { useNavigate } from 'react-router-dom'
 
 const CharacterList = (props) => {
 
   const [characters, setCharacters] = useState([])
+  const [species, setSpecies] = useState('')
 
   useEffect(() => {
     const getCharacters = async () => {
@@ -30,23 +32,44 @@ const CharacterList = (props) => {
 
   console.log(characters)
 
+  let navigate=useNavigate()
+  
+  const showCharacter = (key) => {
+    navigate(`${key}`)
+
+    console.log(key)
+  }
+
   if (characters.length === 0) {
-    return <h1>Retrieving from far, far away...</h1>
+    return <h1 className="retrieving-text">Retrieving from far, far away...</h1>
   } else {
     return (
       <div>
-      <h1>Characters</h1>
-      {
-        characters.map((character) => (
-          <div key={character.name} className="card">
-           
-            <h2>{character.name}</h2>
-            <ul>
-              <h3></h3>
-            </ul>
-          </div>
-        ))
-      }
+        <h1 className="page-title">Characters</h1>
+        <div className="card-container">
+        {
+          characters.map((character, key) => (
+            <div key={key} className="card" onClick={() => showCharacter(parseInt(character.url.substring(32,34)))}>
+              <div className="first-display">
+                <div className='category-container'>
+                    <h2 className="Droid-text">Character</h2>
+                    <div className="category-lines">
+                      <div className="category-line1"></div>
+                      <div className="category-line2"></div>
+                    </div>
+                </div>
+                <h2 className="name">{character.name}</h2>
+                  <ul className='second-display'>
+                    <div className='details-container'>
+                      <h3 className="Droid-text">Random text 3430</h3>
+                      <div className="detail-line"></div>
+                    </div>  
+                  </ul>
+              </div>
+            </div>
+          ))
+        }
+        </div>
       </div>
     )
 }

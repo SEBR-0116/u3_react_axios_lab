@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react'
-import { Route, Routes } from 'react-router-dom'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
 import { useNavigate } from 'react-router-dom'
-import StarshipPage from './StarshipPage'
 
 
 const StarshipList = (props) => {
@@ -35,8 +33,8 @@ const StarshipList = (props) => {
     navigate(`${key}`)
 
     console.log(key)
-
   }
+  
   if (starships.length === 0) {
     return <h1 className="retrieving-text">Retrieving from far, far away...</h1>
   } else {
@@ -62,12 +60,11 @@ const StarshipList = (props) => {
                       <div className="detail-line"></div>
                     </div>  
                   </ul>
-                  </div>
               </div>
+            </div>
           ))
         }
         </div>
-        {/* <Link to={`/starships/${starship.url}`}>Go Back</Link> */}
       </div>
     )
 }

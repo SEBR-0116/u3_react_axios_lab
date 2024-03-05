@@ -19,9 +19,11 @@
 body{
   display: flex;
   flex-direction: column;
-  /* background-color: red; */
+  background-image: url('../assets/stars.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
-  background-color: #242424;
   text-rendering: optimizeLegibility;
 }
 
@@ -29,6 +31,7 @@ body{
   display: flex;
   flex-direction: column;
   width: 100vw;
+  height: 15vh;
   
 }
 
@@ -59,7 +62,7 @@ body{
   display: flex; 
   justify-content: center;
   align-items: center; 
-  height: 100vh;
+  height: 85vh;
 }
 
 
