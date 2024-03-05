@@ -8,6 +8,8 @@ import CharacterPage from './CharacterPage'
 import characters from './CharacterList'
 import PlanetList from './PlanetList'
 import FilmList from './FilmList'
+import FilmPage from './FilmPage'
+import films from './FilmList'
 import SpeciesList from './SpeciesList'
 import SpeciesPage from './SpeciesPage'
 import species from './SpeciesList'
@@ -23,6 +25,7 @@ const Main = (props) => {
                 <Route path="/starships" element={<StarshipList/>}/>
                 <Route path="/starships/:id" element={<StarshipPage starships={starships}/>}/>
                 <Route path="/films" element={<FilmList/>}/>
+                <Route path="/films/:id" element={<FilmPage films={films}/>}/>
                 <Route path="/planets" element={<PlanetList/>}/>
                 <Route path="/characters" element={<CharacterList/>}/>
                 <Route path="/characters/:id" element={<CharacterPage characters={characters}/>}/>

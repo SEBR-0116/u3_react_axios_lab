@@ -122,6 +122,18 @@ h1 {
       font-family: "TradeGothic", sans-serif;
       font-size: 25px;
     }
+    .film-name {
+      margin-top: 0;
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-left: 20px;
+      font-family: "TradeGothic", sans-serif;
+      font-size: 20px;
+    }
+
+
     .Droid-text {
       font-family: "DroidobeshDepot", sans-serif;
       font-size: 15px;
@@ -241,6 +253,7 @@ a:hover {
   border-radius: .3em;;
   margin: 0 auto;
   margin-top: 3em;
+  margin-bottom: 3em;
   width: 5em;
   height: 2em;
 }
