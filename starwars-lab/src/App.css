@@ -1,0 +1,278 @@
+@font-face {
+  font-family: 'Starjedi'; 
+  src: url('src/assets/fonts/Starjedi.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'DroidobeshDepot'; 
+  src: url('src/assets/fonts/DroidobeshDepot.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'AtomedItalic'; 
+  src: url('src/assets/fonts/AtomedItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'TradeGothic-Bold'; 
+  src: url('src/assets/fonts/TradeGothic-Bold.ttf') format('truetype');
+}
+
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-image: url('../assets/stars.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 15vh;
+  
+}
+
+.title-text {
+  font-family: "Starjedi", sans-serif;
+  color: rgb(255, 232, 31);
+  font-size: 3em;
+}
+
+.navbar {
+  font-family: "TradeGothic-Bold", sans-serif;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 90vw;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgb(255, 232, 31);
+}
+
+.main{
+  font-family: "TradeGothic-Bold", sans-serif;
+  font-size: 30px;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  height: 85vh;
+}
+
+
+/* ///// */
+.retrieving-text {
+  font-size: 2rem;
+}
+h1 {
+  font-family: "TradeGothic", sans-serif;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  font-family: 'AtomedItalic', sans-serif;
+  width: 350px; 
+  height: 155px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: rgb(20,24,32);
+  border-top: 10px solid rgb(118, 118, 131);
+  border-bottom: 10px solid rgb(45, 45, 50);
+  border-left: 10px solid rgb(79,79,88);
+  border-right: 10px solid rgb(79,79,88);
+  box-shadow: 5px 5px 10px 0px black;
+}
+
+.first-display{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: rgb(230,230,240);
+    border: 3px solid rgb(230,230,240);
+    margin-bottom: 5px;
+}
+.category-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 20px;
+  margin-bottom: -10px;
+}
+    .name {
+      margin-top: 0;
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-left: 20px;
+      font-family: "TradeGothic", sans-serif;
+      font-size: 25px;
+    }
+    .film-name {
+      margin-top: 0;
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-left: 20px;
+      font-family: "TradeGothic", sans-serif;
+      font-size: 20px;
+    }
+
+
+    .Droid-text {
+      font-family: "DroidobeshDepot", sans-serif;
+      font-size: 15px;
+      padding-right: 15px;
+    }
+
+    .category-lines{
+      display: flex;
+      flex-direction: column;
+    }
+        .category-line1 {
+          width: 40px;
+          height: 10px;
+          border-radius: 2px;
+          border: none;
+          background-color: rgb(230,230,240);
+          margin-bottom: 2px;
+        }
+        .category-line2 {
+          width: 60px;
+          height: 2px;
+          border-radius: 2px;
+          border: none;
+          background-color: rgb(230,230,240);
+        }
+
+
+.second-display {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  font-size: 12px;
+  color: white;
+  padding-right: 20px;
+  margin-left: 75px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  border-left: 3px solid rgb(173,5,32);
+  border-right: 3px solid rgb(173,5,32);
+}
+
+.second-display-long {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  font-size: 12px;
+  color: white;
+  padding-right: 20px;
+  margin-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  border-left: 3px solid rgb(173,5,32);
+  border-right: 3px solid rgb(173,5,32);
+}
+
+    .detail-line {
+      margin-top: -10px;
+      margin-bottom: 10px;
+      width: 50px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: rgb(230,230,240);
+    }
+
+
+
+.item-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 350px; 
+  margin-top: 2em;
+  background-color: rgb(20,24,32);
+  border-top: 10px solid rgb(118, 118, 131);
+  border-bottom: 10px solid rgb(45, 45, 50);
+  border-left: 10px solid rgb(79,79,88);
+  border-right: 10px solid rgb(79,79,88);
+  box-shadow: 5px 5px 10px 0px black;
+}
+  .item-header {
+    border: 2px solid white;
+  }
+
+  .info-title {
+    font-family: "DroidobeshDepot", sans-serif;
+    border-left: 5px solid red;
+    border-right: 5px solid red;
+    border-radius: 5px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .info-wrapper {
+    font-family: 'AtomedItalic', sans-serif;
+    font-size: .75em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    padding: 1em;
+    padding-left: 4em;
+    padding-right: 2em;
+    border: 2px solid white;
+    
+  }
+
+  .info-wrapper h3 {
+  margin: 8px 0; 
+}
+
+a {
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: rgb(255, 232, 31);
+}
+
+
+.goback-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  background-color: rgb(79,79,88);
+  color: white;
+  border-radius: .3em;;
+  margin: 0 auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  width: 5em;
+  height: 2em;
+}
+
+.goback-link:hover {
+  
+  color: rgb(255, 232, 31);
+}
