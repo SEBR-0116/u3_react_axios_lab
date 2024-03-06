@@ -1,0 +1,54 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Link, useParams } from 'react-router-dom';
+
+function StarshipPage() {
+  const { id } = useParams();
+  const [shipData, setShipData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const getStarship = async () => {
+      try {
+        const response = await axios.get(`https://swapi.dev/api/starships/${id}`);
+        setShipData(response.data);
+      } catch (error) {
+        console.error('Error fetching starship:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    getStarship();
+  }, [id]);
+
+  return (
+    <div>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        shipData && (
+          <div>
+            <h2>{shipData.name}</h2>
+            <p><strong>Model:</strong> {shipData.model}</p>
+            <p><strong>Manufacturer:</strong> {shipData.manufacturer}</p>
+            <p><strong>Cost in Credits:</strong> {shipData.cost_in_credits}</p>
+            <p><strong>Length:</strong> {shipData.length}</p>
+            <p><strong>Max Atmosphering Speed:</strong> {shipData.max_atmosphering_speed}</p>
+            <p><strong>Crew:</strong> {shipData.crew}</p>
+            <p><strong>Passengers:</strong> {shipData.passengers}</p>
+            <p><strong>Cargo Capacity:</strong> {shipData.cargo_capacity}</p>
+            <p><strong>Consumables:</strong> {shipData.consumables}</p>
+            <p><strong>Hyperdrive Rating:</strong> {shipData.hyperdrive_rating}</p>
+            <p><strong>MGLT:</strong> {shipData.MGLT}</p>
+            <p><strong>Starship Class:</strong> {shipData.starship_class}</p>
+            {/* You can add more details if needed */}
+            <Link to="/starships">Return to Starship List</Link>
+          </div>
+        )
+      )}
+    </div>
+  );
+}
+
+export default StarshipPage;

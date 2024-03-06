@@ -4,7 +4,7 @@ import Nav from "./Nav"
 function Home() {
     return (
         <div>
-          <p>Home does something</p>
+          <p>Home</p>
        
         </div>
     )

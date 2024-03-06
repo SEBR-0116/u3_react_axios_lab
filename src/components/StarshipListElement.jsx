@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function StarshipListElement({ starships }) {
   return (
     <div>
       {starships.map((starship, index) => (
         <div key={index} className="starship-card">
-          <h2>{starship.name}</h2>
+          <Link to={`/starships/${starship.id}`}>
+            <h2>{starship.name}</h2>
+          </Link>
           <p><strong>Model:</strong> {starship.model}</p>
           <p><strong>Manufacturer:</strong> {starship.manufacturer}</p>
           <p><strong>Cost in Credits:</strong> {starship.cost_in_credits}</p>
