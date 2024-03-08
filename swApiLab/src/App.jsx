@@ -29,8 +29,8 @@ const App = () => {
 
   return (
     <>
-    <Header/>
-    <Main starships={starships}/>
+      <Header/>
+      <Main starships={starships}/>
 
     </>
   )
