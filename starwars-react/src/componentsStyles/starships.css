@@ -1,0 +1,17 @@
+.starship-info {
+  margin-top: 20px;
+}
+
+.starship-name, .starship {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.model, .class, .manufacture, .crew, .pass-capacity, .cargo-capacity, .atmospher, .hyperdrive {
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+}
